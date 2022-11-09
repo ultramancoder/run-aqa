@@ -80,3 +80,4 @@ jobs:
         jdksource: 'install-jdk'
         build_list: 'system'
         target: '_DaaLoadTest_daa1_5m'
+        tkg_Repo: 'ultramancoder/TKG:debug-win'
