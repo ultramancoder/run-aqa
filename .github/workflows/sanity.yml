@@ -2,6 +2,7 @@ name: "nightly sanity test"
 on:
   schedule:
     - cron:  '30 20 * * 1-5'
+  workflow_dispatch:
 
 jobs:
   sanity:
@@ -21,6 +22,9 @@ jobs:
         targets: JDK_${{ matrix.version }}
         impl: ${{ matrix.impl }}
         source: 'nightly'
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v3
+      if: ${{ github.event_name == 'workflow_dispatch' && matrix.os == 'windows-latest' }}
     - name: AQA
       uses: ./
       with: 
