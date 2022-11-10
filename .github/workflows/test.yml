@@ -71,7 +71,7 @@ jobs:
       with:
         version: '11'
         targets: 'JDK_11'
-        impl: 'openj9'
+        impl: 'hotspot'
         source: 'nightly'
     - name: AQA
       uses: ./
