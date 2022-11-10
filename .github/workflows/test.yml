@@ -71,7 +71,7 @@ jobs:
       with:
         version: '11'
         targets: 'JDK_11'
-        impl: 'openj9'
+        impl: 'hotspot'
         source: 'nightly'
     - name: AQA
       uses: ./
@@ -80,3 +80,4 @@ jobs:
         jdksource: 'install-jdk'
         build_list: 'system'
         target: '_DaaLoadTest_daa1_5m'
+        tkg_Repo: 'ultramancoder/TKG:debug-win'
